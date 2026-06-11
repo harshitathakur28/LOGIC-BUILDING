@@ -9,13 +9,14 @@ int main(){
     for(int i=0; i<n; i++){
         cin>>arr[i];
     }
-    int maxright=arr[n-1];
-
-    cout<<maxright<<" ";
-    for(int i=n-2;i>=0;i--){
-        if(arr[i]>maxright){    
-            maxright=arr[i];
-             cout<<maxright<<" ";
+    int target;
+    cout<<"enter the target: ";
+    cin>>target;
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(arr[i]+arr[j]==target){
+                cout<<i<<" "<<j;
+            }
         }
     }
     return 0;
