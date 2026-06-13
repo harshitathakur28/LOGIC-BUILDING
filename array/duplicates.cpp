@@ -1,4 +1,5 @@
 #include<iostream>
+#include<algorithm>
 using namespace std;
 int main(){
     int n;
@@ -9,6 +10,7 @@ int main(){
     for(int i=0; i<n; i++){
         cin>>arr[i];
     }
+    sort(arr,arr+n);
      int j=0;
      for(int i=1;i<n;i++){
         if(arr[i]!=arr[j]){
@@ -16,8 +18,8 @@ int main(){
         }
      }
      cout<<"array is: ";
-     for(int j=0;j<=arr[j];j++){
-        cout<<arr[j]<<" ";
+     for(int i=0;i<=j;i++){
+        cout<<arr[i]<<" ";
      }
      return 0;
 }
