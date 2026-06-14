@@ -5,22 +5,23 @@ int main(){
     string s;
     cout<<"enter any word: ";
     getline(cin,s);
+    bool found=true;
     for(int i=0;i<=s.length()-1;i++){
         int count=0;
+        found=false;
         for(int j=0;j<=s.length()-1;j++){
             if(s[i]==s[j]){
                 count++;
             }
         }
-        if(count==1){
-            cout<<"first non repeating character: "<<s[i];
+        if(count>1){
+            found=true;
+            cout<<"first repeating character: "<<s[i];
             break;
         }
-        else{
-            cout<<"non repeating character";
-            break;
-        }
-    
+    }
+    if(!found){
+        cout<<"no repeating character";
     }
     return 0;
 }
