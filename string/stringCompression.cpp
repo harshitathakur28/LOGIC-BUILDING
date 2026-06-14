@@ -1,5 +1,3 @@
-// to check frequency of each character
-
 #include<iostream>
 #include<string>
 #include<algorithm>
@@ -9,16 +7,16 @@ int main(){
     cout<<"enter any word: ";
     getline(cin,s);
     
-    sort(s.begin(),s.end());
     int count=1;
-    for(int i=0;i<s.length();i++){
+    for(int i=0;i<s.length()-1;i++){
         if(s[i]==s[i+1]){
             count++;
         }
-        if(s[i]!=s[i+1]){
-            cout<<s[i]<<" occurs "<<count<<" times"<<endl;
+        else{
+            cout<<s[i]<<count;
             count=1;
-        }
+        } 
     }
+    cout<<s[s.length()-1]<<count;
     return 0;
 }
