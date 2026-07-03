@@ -16,13 +16,11 @@ int main(){
             }
             ans+=' ';
             end=j-1;
-            continue;
         }
     }
     for(int k=0;k<=end;k++){
         ans+=s[k];
     }
-    
     cout<<"reversed string is: "<<ans;
     return 0;
 }
